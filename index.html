@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saiket Systems - Task 4 HTML Forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <div class="form-header">
+        <span class="badge">Task 4 Showcase</span>
+        <h1>Get in Touch</h1>
+        <p>
+          Please fill out the form below. We use validation to ensure all
+          required information is submitted accurately.
+        </p>
+      </div>
+
+      <form
+        class="custom-form"
+        action="#"
+        method="post"
+        onsubmit="return false;"
+      >
+        <!-- TEXT INPUTS -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullname"
+              >Full Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="e.g. Yishak Mekuannent"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email"
+              >Email Address <span class="required">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="yishak@example.com"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- DROPDOWN (SELECT) -->
+        <div class="form-group">
+          <label for="subject"
+            >Inquiry Subject <span class="required">*</span></label
+          >
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select a subject...</option>
+            <option value="web-dev">Web Development Project</option>
+            <option value="internship">Internship / Career Inquiry</option>
+            <option value="feedback">General Feedback</option>
+            <option value="support">Technical Support</option>
+          </select>
+        </div>
+
+        <!-- RADIO BUTTONS -->
+        <div class="form-group">
+          <label
+            >Preferred Contact Method <span class="required">*</span></label
+          >
+          <div class="radio-group">
+            <label class="radio-card">
+              <input type="radio" name="contact-method" value="email" checked />
+              <span class="radio-custom"></span>
+              Email
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="contact-method" value="phone" />
+              <span class="radio-custom"></span>
+              Phone Call
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="contact-method" value="telegram" />
+              <span class="radio-custom"></span>
+              Telegram
+            </label>
+          </div>
+        </div>
+
+        <!-- CHECKBOXES (MULTI-SELECT) -->
+        <div class="form-group">
+          <label>Areas of Interest (Select all that apply)</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-card">
+              <input type="checkbox" name="interest" value="frontend" />
+              <span class="checkbox-custom"></span>
+              Frontend Engineering
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="interest" value="backend" />
+              <span class="checkbox-custom"></span>
+              Backend & APIs
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="interest" value="uiux" />
+              <span class="checkbox-custom"></span>
+              UI/UX Design
+            </label>
+            <label class="checkbox-card">
+              <input type="checkbox" name="interest" value="cloud" />
+              <span class="checkbox-custom"></span>
+              Cloud Solutions
+            </label>
+          </div>
+        </div>
+
+        <!-- TEXTAREA -->
+        <div class="form-group">
+          <label for="message"
+            >Your Message <span class="required">*</span></label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- AGREEMENT CHECKBOX -->
+        <div class="form-group agreement-group">
+          <label class="checkbox-card">
+            <input type="checkbox" name="terms" required />
+            <span class="checkbox-custom"></span>
+            I agree to the privacy policy and terms of service
+            <span class="required">*</span>
+          </label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="submit-btn">Submit Form</button>
+      </form>
+
+      <footer class="form-footer">
+        <p>&copy; 2026 Yishak Mekuannent. Created for Saiket Systems Task 4.</p>
+      </footer>
+    </div>
+  </body>
+</html>
