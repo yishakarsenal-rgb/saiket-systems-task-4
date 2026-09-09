@@ -104,7 +104,6 @@ body {
   color: var(--accent);
 }
 
-/* INPUTS, SELECT, TEXTAREA */
 input[type="text"],
 input[type="email"],
 select,
